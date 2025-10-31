@@ -1,0 +1,258 @@
+/* ==========================
+   Base / Reset
+   ========================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* ==========================
+   NAVIGATION STYLE
+   ========================== */
+
+/* NAV WRAPPER */
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* include padding in width */
+  transition: background 0.3s ease; 
+  background: transparent; /* no color over hero */
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.717);
+  position: relative;
+  z-index: 1002;  /* Higher than nav-links */
+  font-size: 32px;    /* Increase icon size */
+  padding: 8px;       /* Add some padding around icon */
+}
+
+.menu-icon .material-symbols-outlined {
+  font-size: 50px !important;    /* Using !important to override Material Icons defaults */
+  display: block;
+}
+
+nav .menu-icon {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.717);
+  position: relative;
+  z-index: 1001;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+.logo h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  padding-left: 10px;
+}
+
+.mobile-logo { display: block; }
+.desktop-logo { display: none; }
+
+/* MENU LINKS (HIDDEN BY DEFAULT) */
+.nav-links {
+  display: none;
+  position: fixed;  /* Changed from absolute to fixed */
+  top: 0;          /* Changed to cover full screen */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;     /* Full width */
+  height: 100vh;   /* Full height */
+  background: rgba(0, 0, 0, 0.8);  /* Darker background */
+  backdrop-filter: blur(8px);   /* Increased blur */
+  z-index: 999;
+}
+
+/* VERTICAL MENU LIST */
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertical center */
+  align-items: center;      /* Horizontal center */
+  gap: 0.700rem;               /* Space between items */
+}
+
+.nav-links ul li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;       /* Larger font size */
+  text-align: center;      /* Center text */
+  transition: color 0.3s;  /* Smooth color transition */
+}
+
+.nav-links ul li a:hover {
+  color: #a78bfa;
+}
+
+/* WHEN CHECKBOX IS CHECKED → SHOW MENU */
+#menu-toggle:checked ~ .nav-links {
+  display: block;
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+#hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #4b0082);
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 2rem; 
+}
+
+/* ==== HERO-CONTENT ==== */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 85%;
+}
+
+h2 {
+  font-size: 17vw;
+  color: #a78bfa;
+  font-weight: normal;
+  line-height: 1;
+}
+
+p {
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.717);
+  font-weight: lighter;
+  padding: 0 1rem;
+}
+
+/* simple spacing tweaks (change values to taste) */
+.hero-content h2 {
+  margin-bottom: 12px; /* space between heading and paragraph */
+}
+
+/* ==========================
+   BUTTONS
+   ========================== */
+
+/* Browse projects button */
+.browse-projects-btn {
+  display: inline-block;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: white;
+  background-color: #a78bfa;
+  border: none;
+  border-radius: 80px;
+  box-shadow: 0px 15px 20px #7861bf;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-decoration: none; /* important for <a> */
+  text-align: center;
+  white-space: nowrap;
+  padding: 1em 1em; 
+  min-width: 200px;
+}
+
+.browse-projects-btn:hover {
+  background-color: #8259fc;
+  color: #fff;
+  padding: 1.1em 1.1em;          /* slightly bigger */
+  box-shadow: 0px 20px 25px #6b45e7; /* stronger shadow */
+  transform: translateY(-1px);  
+}
+
+/* Download CV button */
+.download-cv-btn {
+  display: inline-block;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #a78bfa;
+  background-color: #ffffff;
+  border: 1px solid #a78bfa;
+  border-radius: 80px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-decoration: none; /* important for <a> */
+  text-align: center;
+  white-space: nowrap;
+  padding: 1em 1em; 
+  min-width: 200px;
+}
+
+.download-cv-btn-container {
+  position: static;
+}
+
+.download-cv-btn:hover {
+  background-color: #a78bfa;
+  color: #fff;
+  padding: 1.1em 1.1em;          
+  transform: translateY(-1px);  
+}
+
+/* buttons-container */
+.buttons-container {
+  display: flex;
+  gap: 20px;            /* customizable gap between the two buttons */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ==========================
+   ABOUT SECTION
+   ========================== */
+
+#about {
+  height: 100vh;
+  background: #161b22;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 2rem; 
+}
+
+
+
+
+
+
+
