@@ -1,10 +1,8 @@
-const nav = document.querySelector('nav');
-const heroHeight = document.querySelector('#hero').offsetHeight;
-
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= heroHeight) {
-    nav.style.background = '#161b22'; // color for other sections
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 50) { // adjust value based on hero height
+    nav.classList.add('scrolled');
   } else {
-    nav.style.background = 'transparent'; // transparent over hero
+    nav.classList.remove('scrolled');
   }
 });

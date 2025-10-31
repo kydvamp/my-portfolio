@@ -18,16 +18,21 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 8px 15px;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   width: 100%;
   box-sizing: border-box; /* include padding in width */
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease, border-bottom 0.3s ease;
   background: transparent; /* no color over hero */
 }
+
+nav.scrolled {
+  background: #0d1117; /* or your desired color */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.203); /* thin white line */
+}
+
 
 /* HIDE CHECKBOX */
 #menu-toggle {
@@ -37,7 +42,7 @@ nav {
 /* HAMBURGER ICON */
 .menu-icon {
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.717);
+  color: #c9d1d9;
   position: relative;
   z-index: 1002;  /* Higher than nav-links */
   font-size: 32px;    /* Increase icon size */
@@ -51,7 +56,7 @@ nav {
 
 nav .menu-icon {
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.717);
+  color: #c9d1d9;
   position: relative;
   z-index: 1001;
   padding: 8px;
@@ -102,7 +107,7 @@ nav .menu-icon {
 .nav-links ul li a {
   display: block;
   padding: 1rem;
-  color: white;
+  color: #c9d1d9;
   text-decoration: none;
   font-size: 1.5rem;       /* Larger font size */
   text-align: center;      /* Center text */
@@ -128,8 +133,8 @@ nav .menu-icon {
   overflow: hidden;
   display: flex;
   flex-direction: column; 
-  align-items: center;    
-  gap: 2rem; 
+  align-items: center;   
+  gap: 2.5rem; 
 }
 
 /* ==== HERO-CONTENT ==== */
@@ -140,7 +145,6 @@ nav .menu-icon {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 85%;
 }
 
 h2 {
@@ -152,9 +156,10 @@ h2 {
 
 p {
   font-size: 5vw;
-  color: rgba(255, 255, 255, 0.717);
+  color: #c9d1d9;
   font-weight: lighter;
   padding: 0 1rem;
+  font-style: italic;
 }
 
 /* simple spacing tweaks (change values to taste) */
@@ -204,7 +209,7 @@ p {
   font-weight: normal;
   color: #a78bfa;
   background-color: #ffffff;
-  border: 1px solid #a78bfa;
+  border: 3px solid #a78bfa;
   border-radius: 80px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -240,14 +245,35 @@ p {
    ========================== */
 
 #about {
-  height: 100vh;
+  height: 120vh;
   background: #161b22;
-  justify-content: center;
-  overflow: hidden;
+  padding-top: -10vh;  
   display: flex;
   flex-direction: column; 
-  align-items: center;    
-  gap: 2rem; 
+  align-items: center; 
+  gap: 2.5rem; 
+}
+
+about .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h3 {
+  font-size: 17vw;
+  color: #a78bfa;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+}
+
+.bio-text {
+  margin-bottom: 15px;
+  color: #c9d1d9;
+  line-height: 1.5;
 }
 
 

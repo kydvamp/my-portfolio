@@ -36,12 +36,27 @@
   .buttons-container{ gap:20px; bottom:6%; }
 }
 
+@media (min-width: 768px) {
+  h3 {
+    font-size: 8vw;  /* Reduce the font size on larger screens */
+  }
+}
+
+@media (min-height: 844px) { /* iPhone 14 Pro Max height */
+  #about {
+    height: 102vh;   /* slightly reduce top space */
+  }
+}
+
 /* Desktop large screens */
 @media (min-width:1024px){
   .logo h1{ font-size:22px; }
   .hero-content h2{ font-size:clamp(36px,10vw,96px); }
   .buttons-container{ bottom:9%; }
+  h3 { top: 30%; }  /* Adjust top padding for better positioning */
 }
+
+
 
 /* end of responsive.css */
 
