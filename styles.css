@@ -11,7 +11,6 @@ body, html {
    NAVIGATION STYLE
    ========================== */
 
-/* NAV WRAPPER */
 nav {
   position: fixed;
   display: flex;
@@ -23,9 +22,10 @@ nav {
   right: 0;
   z-index: 1000;
   width: 100%;
-  box-sizing: border-box; /* include padding in width */
+  box-sizing: border-box; 
   transition: background 0.3s ease, border-bottom 0.3s ease;
-  background: transparent; /* no color over hero */
+  background: transparent; 
+  font-weight: bold;
 }
 
 nav.scrolled {
@@ -49,6 +49,10 @@ nav.scrolled {
   padding: 8px;       /* Add some padding around icon */
 }
 
+.material-symbols-outlined {
+  color: #c9d1d9ad;
+}
+
 .menu-icon .material-symbols-outlined {
   font-size: 50px !important;    /* Using !important to override Material Icons defaults */
   display: block;
@@ -68,7 +72,6 @@ nav .menu-icon {
 .logo h1 {
   margin: 0;
   font-size: 30px;
-  font-weight: 500;
   color: white;
   padding-left: 10px;
 }
@@ -128,13 +131,13 @@ nav .menu-icon {
    ========================== */
 #hero {
   height: 100vh;
-  background: linear-gradient(135deg, #000000, #4b0082);
+  background: radial-gradient(#2e004e 5%, #180424 95%);
   justify-content: center;
   overflow: hidden;
   display: flex;
   flex-direction: column; 
   align-items: center;   
-  gap: 2.5rem; 
+  gap: 2rem; 
 }
 
 /* ==== HERO-CONTENT ==== */
@@ -150,16 +153,23 @@ nav .menu-icon {
 h2 {
   font-size: 17vw;
   color: #a78bfa;
-  font-weight: normal;
+  font-weight: bolder;
   line-height: 1;
+  font-family: sans-serif;
 }
 
 p {
-  font-size: 5vw;
+  font-size: 18px;
   color: #c9d1d9;
   font-weight: lighter;
   padding: 0 1rem;
   font-style: italic;
+  width: 70%;
+  line-height: 1.5;
+}
+
+span {
+  color: #a78bfa;
 }
 
 /* simple spacing tweaks (change values to taste) */
@@ -176,27 +186,23 @@ p {
   display: inline-block;
   font-size: 5vw;
   text-transform: uppercase;
-  font-family: sans-serif;
   font-weight: normal;
   color: white;
-  background-color: #a78bfa;
+  background: linear-gradient(to right, #b084ff, #6a2bdb);
   border: none;
   border-radius: 80px;
-  box-shadow: 0px 15px 20px #7861bf;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   text-decoration: none; /* important for <a> */
   text-align: center;
   white-space: nowrap;
-  padding: 1em 1em; 
+  padding: 1em 2em; 
   min-width: 200px;
 }
 
 .browse-projects-btn:hover {
-  background-color: #8259fc;
-  color: #fff;
+  background: linear-gradient(to right, #d2b2ff, #8a4dff);
   padding: 1.1em 1.1em;          /* slightly bigger */
-  box-shadow: 0px 20px 25px #6b45e7; /* stronger shadow */
   transform: translateY(-1px);  
 }
 
@@ -207,16 +213,17 @@ p {
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: normal;
-  color: #a78bfa;
-  background-color: #ffffff;
-  border: 3px solid #a78bfa;
+  color: #c9d1d9;
+  background-color: none ;
+  border: 2px solid;
+  border-color: #8b4dff6b;
   border-radius: 80px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   text-decoration: none; /* important for <a> */
   text-align: center;
   white-space: nowrap;
-  padding: 1em 1em; 
+  padding: 1em 2em; 
   min-width: 200px;
 }
 
@@ -226,7 +233,6 @@ p {
 
 .download-cv-btn:hover {
   background-color: #a78bfa;
-  color: #fff;
   padding: 1.1em 1.1em;          
   transform: translateY(-1px);  
 }
@@ -245,16 +251,15 @@ p {
    ========================== */
 
 #about {
-  height: 120vh;
-  background: #161b22;
-  padding-top: -10vh;  
+  height: 205vh;
+  background: radial-gradient(#2e004e 5%, #180424 95%);
   display: flex;
   flex-direction: column; 
   align-items: center; 
   gap: 2.5rem; 
 }
 
-about .hero-content {
+#about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,18 +268,43 @@ about .hero-content {
 }
 
 h3 {
-  font-size: 17vw;
-  color: #a78bfa;
-  font-weight: normal;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
   line-height: 1;
   text-align: center;
 }
 
-.bio-text {
-  margin-bottom: 15px;
-  color: #c9d1d9;
-  line-height: 1.5;
+.bio-box {
+  width: 14em;
+  height: 42em;
+  padding: 0;
+  margin: 0;
+  background-color: #161b22;
+  border: 2px solid #30363d;
+  border-radius: 15px;
+  box-shadow: 0 0 35px #50008981;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
+
+.bio-text p{
+  font-style: normal;
+  margin: 1.5rem 1rem;
+  padding: 0;
+  line-height: 1.5;
+  color: #c9d1d9;
+}
+
+
+
+
+
+
+
+
+
 
 
 

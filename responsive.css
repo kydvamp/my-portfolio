@@ -4,12 +4,9 @@
 
 /* Tablet and up */
 @media (min-width: 768px) {
-
-  /* hide mobile toggle and overlay */
   .menu-icon,
   #menu-toggle { display: none; }
 
-  /* nav becomes inline */
   .nav-links{
     display:block;
     position:static;
@@ -18,12 +15,14 @@
     backdrop-filter:none;
     padding:0;
   }
+
   .nav-links ul{
     flex-direction:row;
     gap:20px;
     align-items:center;
     height:auto;
   }
+  
   .nav-links ul li a{
     font-size:16px;
     padding:.4rem .5rem;
@@ -42,10 +41,17 @@
   }
 }
 
-@media (min-height: 844px) { /* iPhone 14 Pro Max height */
-  #about {
-    height: 102vh;   /* slightly reduce top space */
+/* iPhone 14 Pro Max height */
+@media (min-height: 844px) { 
+  #hero {
+    height: 100vh;  
   }
+  #about {
+    height: 127vh;
+  }
+  about .hero-content h2 {
+    text-align: center;  
+}
 }
 
 /* Desktop large screens */
