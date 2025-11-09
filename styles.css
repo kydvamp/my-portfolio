@@ -4,7 +4,6 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 /* ==========================
@@ -15,7 +14,7 @@ nav {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 8px 15px;
   top: 0;
   left: 0;
@@ -46,7 +45,7 @@ nav.scrolled {
   position: relative;
   z-index: 1002;  /* Higher than nav-links */
   font-size: 32px;    /* Increase icon size */
-  padding: 8px;       /* Add some padding around icon */
+  margin-left: 45%; 
 }
 
 .material-symbols-outlined {
@@ -63,7 +62,6 @@ nav .menu-icon {
   color: #c9d1d9;
   position: relative;
   z-index: 1001;
-  padding: 8px;
   display: flex;
   align-items: center;
 }
@@ -73,7 +71,6 @@ nav .menu-icon {
   margin: 0;
   font-size: 30px;
   color: white;
-  padding-left: 10px;
 }
 
 .mobile-logo { display: block; }
@@ -88,7 +85,7 @@ nav .menu-icon {
   right: 0;
   bottom: 0;
   width: 100%;     /* Full width */
-  height: 100vh;   /* Full height */
+  height: 100%;   /* Full height */
   background: rgba(0, 0, 0, 0.8);  /* Darker background */
   backdrop-filter: blur(8px);   /* Increased blur */
   z-index: 999;
@@ -97,14 +94,13 @@ nav .menu-icon {
 /* VERTICAL MENU LIST */
 .nav-links ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;  /* Vertical center */
+  flex-direction: column; /* Vertical center */
   align-items: center;      /* Horizontal center */
-  gap: 0.700rem;               /* Space between items */
+  gap: 0.700rem; 
+  justify-content: center;  
+  
 }
 
 .nav-links ul li a {
@@ -266,7 +262,7 @@ span {
   text-align: center;
 }
 
-h3 {
+.about-title{
   font-size: 2rem;
   color: white;
   font-weight: bold;
@@ -305,8 +301,72 @@ h3 {
 }
 
 /* ==========================
-   ABOUT SECTION
+   SKILLS SECTION
    ========================== */
+
+#skills {
+  height: 100vh;
+  background: #161B22;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 2rem; 
+}
+
+.skills-title{
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #a78bfa;
+  margin-bottom: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 0.01rem 0.01rem 0.01rem;
+  margin: 0.5rem;
+  width: 100px;
+  height: 120px;
+  overflow: hidden;
+  gap: 12px;
+}
+
+.skill-card .skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-card .skill-name {
+  font-size: 0.8rem;
+  color: #c9d1d9;
+  text-align: center;
+  margin: 0; 
+  font-family: monospace;
+  font-style: normal;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.1);
+  border-color: #a78bfa;
+}
+
+
+
 
 
 
