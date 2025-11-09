@@ -312,7 +312,9 @@ span {
   display: flex;
   flex-direction: column; 
   align-items: center;   
-  gap: 2rem; 
+  margin: -10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-title{
@@ -320,6 +322,7 @@ span {
   color: white;
   font-weight: bold;
   text-align: center;
+  align-items: flex-start;
 }
 
 .category-title {
@@ -336,18 +339,16 @@ span {
   background-color: #0d1117;
   border: 1px solid #30363d;
   border-radius: 10px;
-  padding: 0.01rem 0.01rem 0.01rem;
-  margin: 0.5rem;
   width: 100px;
-  height: 120px;
-  overflow: hidden;
+  height: 110px;
+  margin: 0.3rem;
   gap: 12px;
 }
 
 .skill-card .skill-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  width: 35px;
+  height: 35px;
+  margin-top: 2.5px;
 }
 
 .skill-card .skill-name {
@@ -364,6 +365,15 @@ span {
   transform: scale(1.1);
   border-color: #a78bfa;
 }
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5px;
+}
+
+
 
 
 
