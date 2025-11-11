@@ -311,32 +311,34 @@ span.gradient-text {
    ========================== */
 
 #skills {
-  height: 115vh;
+  height: 75vh;
   background: #161B22;
-  justify-content: center;
   overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-row-1, .skills-row-2, .skills-row-3 {
   display: flex;
-  flex-direction: column; 
-  align-items: left; 
-  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
-.skills-content {
-  margin-top: -1.5rem;
-}
-
-.skills-title{
+.skills-title {
   font-size: 2rem;
   color: white;
   font-weight: bold;
   text-align: center;
-  align-items: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
-.category-title {
-  font-size: 1.5rem;
-  color: #a78bfa;
-  margin-left: 1.8rem;
+.skills-container {
+  margin-top: 50px;
 }
 
 .skill-card {
@@ -347,21 +349,22 @@ span.gradient-text {
   background-color: #0d1117;
   border: 1px solid #30363d;
   border-radius: 10px;
-  width: 88px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   margin: 0.3rem;
   margin-top: -10px;
+  flex-shrink: 0;
 }
 
 .skill-card .skill-icon {
-  width: 20px;
+  width: 25px;
   height: 25px;
   margin-bottom: 10px;
   margin-top: 9px;
 }
 
 .skill-card .skill-name {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   color: #c9d1d9;
   text-align: center;
   margin: 0; 
@@ -369,23 +372,32 @@ span.gradient-text {
   font-style: normal;
 }
 
+.skill-card.empty {
+  display: none;
+  pointer-events: none;
+  background: none;
+  border: none;
+}
+
 .skill-card:hover {
   transform: translateY(-5px);
-  transform: scale(1.1);
+  transform: scale(1.5);
   border-color: #a78bfa;
+  box-shadow: #50008981 0px 0px 35px;
 }
 
-.skills-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 0.5px;
-}
 
 /* ==========================
-   SKILLS SECTION
+   PROJECTS SECTION
    ========================== */
 
+   #projects {
+    height: 100vh;
+    background: #0d1117;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+   }
 
 
 
