@@ -58,6 +58,7 @@
 <section id="about">   
   <div class="about-content">
     <h3 class="about-title">About <span class="gradient-text">Me</span></h3>
+    <h3 class="lines1"><span class="gradient-line">____</span></h3>
     <div class="bio-container">
     <div class="bio-box"></div>
     <div class="bio-text">
@@ -73,7 +74,8 @@
 </section>
 
 <section id="skills">
-  <h3 class="skills-title"><span class="gradient-text">Skills</span></h3>
+  <h3 class="skills-title">Skills <span class="gradient-text">& Tools</span></h3>
+  <h3 class="lines2"><span class="gradient-line">____</span></h3>
   <div class="skills-container">
     <!-- Row 1: 4 cards -->
   <div class="skills-row-1">
@@ -125,76 +127,96 @@
 
 <section id="projects">
   <h3>Featured <span class="gradient-text">Projects</span></h3>
-  
-  <!-- Ecommerce Card -->
-  <div class="cards-container">
-  <div class="card">
-    <div class="image-wrapper">
-      <img src="images\projects\ecommerce.jpg" alt="Ecommerce Project">
-    </div>
-    <div class="card-content">
-      <h3 class="card-title">E-commerce Platform</h3>
-      <p class="card-tags">#HTML #CSS #Portfolio</p>
-      <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, quibusdam minima? Praesentium, fugiat. Cupiditate porro doloribus repellat, ipsum blanditiis facere non id aperiam maiores velit necessitatibus, consequuntur adipisci magnam numquam.</p>
-      <div class="card-buttons">
-        <button>Live Demo</button>
-        <button>Source Code</button>
+
+  <div class="portfolio-cards-container">
+
+    <!-- Ecommerce Card -->
+    <div class="portfolio-card">
+      <div class="image-wrapper">
+        <img src="images/projects/ecommerce.jpg" alt="Ecommerce Project">
+      </div>
+      <div class="portfolio-card-content">
+        <div class="portfolio-card-tags">
+          <span class="card-tag">React</span>
+          <span class="card-tag">TypeScript</span>
+          <span class="card-tag">Tailwind CSS</span>
+          <span class="card-tag">E-Commerce</span>
+        </div>
+        <h3 class="portfolio-card-title">E-commerce Platform</h3>
+        <p class="portfolio-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, quibusdam minima? Praesentium, fugiat...</p>
+        <div class="portfolio-card-buttons">
+          <button class="live-demo-btn">Live Demo</button>
+          <button class="source-code-btn">Source Code</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Social Media Dashboard Card -->
-  <div class="card">
-    <div class="image-wrapper">
-      <img src="image2.jpg" alt="Project 2">
-    </div>
-    <div class="card-content">
-      <h3 class="card-title">Project 2</h3>
-      <p class="card-tags">#JS #Portfolio</p>
-      <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae vitae perferendis impedit consequuntur omnis error rerum provident distinctio quo labore aliquid mollitia velit nostrum eligendi excepturi assumenda, possimus minima?</p>
-      <div class="card-buttons">
-        <button>Live Demo</button>
-        <button>Source Code</button>
+    <!-- Social Media Dashboard 
+    <div class="portfolio-card">
+      <div class="image-wrapper">
+        <img src="images/projects/social-media-dashboard.jpg" alt="Social Media Dashboard Project">
+      </div>
+      <div class="portfolio-card-content">
+        <h3 class="portfolio-card-title">Social Media Dashboard</h3>
+        <div class="portfolio-card-tags">
+          <span class="card-tag">React</span>
+          <span class="card-tag">Charts</span>
+          <span class="card-tag">Analytics</span>
+          <span class="card-tag">Dashboard</span>
+        </div>
+        <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae vitae perferendis impedit...</p>
+        <div class="portfolio-card-buttons">
+          <button class="live-demo-btn">Live Demo</button>
+          <button class="source-code-btn">Source Code</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Task Management Card -->
-  <div class="card">
-    <div class="image-wrapper">
-      <img src="image3.jpg" alt="Project 3">
-    </div>
-    <div class="card-content">
-      <h3 class="card-title">Project 3</h3>
-      <p class="card-tags">#React #Portfolio</p>
-      <p class="card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, amet! Quod nulla pariatur perspiciatis? Iure totam odit, sed provident laudantium dicta asperiores quam, aspernatur veniam deleniti at vero, quia neque.</p>
-      <div class="card-buttons">
-        <button>Live Demo</button>
-        <button>Source Code</button>
+
+    <div class="portfolio-card">
+      <div class="image-wrapper">
+        <img src="images/projects/task-management.jpg" alt="Task Management Project">
+      </div>
+      <div class="portfolio-card-content">
+        <h3 class="portfolio-card-title">Task Management App</h3>
+        <div class="portfolio-card-tags">
+          <span class="card-tag">React</span>
+          <span class="card-tag">Drag & Drop</span>
+          <span class="card-tag">Productivity</span>
+        </div>
+        <p class="portfolio-card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, amet! Quod nulla pariatur...</p>
+        <div class="portfolio-card-buttons">
+          <button class="live-demo-btn">Live Demo</button>
+          <button class="source-code-btn">Source Code</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Weather Card -->
-   <div class="card">
-    <div class="image-wrapper">
-      <img src="image3.jpg" alt="Project 3">
-    </div>
-    <div class="card-content">
-      <h3 class="card-title">Project 3</h3>
-      <p class="card-tags">#React #Portfolio</p>
-      <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At qui velit tenetur officiis adipisci, minima amet in a nulla? Nulla, culpa deleniti saepe ea magnam nihil minus quos eos laboriosam!</p>
-      <div class="card-buttons">
-        <button>Live Demo</button>
-        <button>Source Code</button>
+    
+    <div class="portfolio-card">
+      <div class="image-wrapper">
+        <img src="images/projects/weather.jpg" alt="Weather Project">
+      </div>
+      <div class="portfolio-card-content">
+        <h3 class="portfolio-card-title">Weather Dashboard</h3>
+        <div class="portfolio-card-tags">
+          <span class="card-tag">React</span>
+          <span class="card-tag">API Integration</span>
+          <span class="card-tag">Weather</span>
+          <span class="card-tag">Charts</span>
+        </div>
+        <p class="portfolio-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At qui velit tenetur officiis...</p>
+        <div class="portfolio-card-buttons">
+          <button class="live-demo-btn">Live Demo</button>
+          <button class="source-code-btn">Source Code</button>
+        </div>
       </div>
     </div>
+    (converted) -->
+
   </div>
-
-</div>
-
-
 </section>
+
 
 <section id="contact"></section>
 

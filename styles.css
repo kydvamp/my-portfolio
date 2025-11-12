@@ -191,23 +191,25 @@ span.gradient-text {
   text-transform: uppercase;
   font-weight: normal;
   color: white;
-  background: linear-gradient(to right, #b084ff, #6a2bdb);
+  background: linear-gradient(to right, #b084ff 0%, #9b7fff 50%, #6a2bdb 100%);
   border: none;
   border-radius: 80px;
-  transition: all 0.3s ease 0s;
   cursor: pointer;
-  text-decoration: none; /* important for <a> */
+  text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  padding: 1em 2em; 
+  padding: 1em 2em;
   min-width: 200px;
+  transition: all 0.5s ease;
 }
 
+/* Hover: lighten center + subtle, bigger glow below */
 .browse-projects-btn:hover {
-  background: linear-gradient(to right, #d2b2ff, #8a4dff);
-  padding: 1.1em 1.1em;          /* slightly bigger */
-  transform: translateY(-1px);  
+  background: linear-gradient(to right, #b084ff 0%, #c8a1ff 50%, #6a2bdb 100%);
+  box-shadow: 0 12px 40px rgba(200, 161, 255, 0.3); /* bigger, subtle glow below */
+  transform: translateY(-2px) scale(1.1);
 }
+
 
 /* Download CV button */
 .download-cv-btn {
@@ -237,7 +239,6 @@ span.gradient-text {
 .download-cv-btn:hover {
   background-color: #a78bfa;
   padding: 1.1em 1.1em;          
-  transform: translateY(-1px);  
 }
 
 .buttons-container {
@@ -251,6 +252,22 @@ span.gradient-text {
 /* ==========================
    ABOUT SECTION
    ========================== */
+
+.gradient-line {
+  background: linear-gradient(135deg, #9c2eaf, #9245de);
+    -webkit-background-clip: text; /* Chrome, Edge, Safari */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;          /* Firefox */
+    color: transparent;
+    display: inline-block;
+}
+
+.lines1 {
+  margin-top: -60px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
 
 #about {
   height: 165vh;
@@ -294,15 +311,15 @@ span.gradient-text {
 }
 .bio-text {
   display: flex;
-    flex-direction: column;   /* stack paragraphs vertically */
-    justify-content: center;  /* vertical centering */
-    align-items: center;      /* horizontal centering */
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;    
     color: #c9d1d9;
     font-size: 1rem;
     line-height: 1.5;
     z-index: 2;
     width: 17em;
-    height: 100%;            /* fill the box vertically */
+    height: 100%;            
     padding: 2rem;
 }
 
@@ -312,10 +329,17 @@ span.gradient-text {
 
 #skills {
   height: 75vh;
-  background: #161B22;
+  background: radial-gradient(#2e004e 5%, #180424 95%);
   overflow: hidden;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.lines2 {
+  margin-top: -40px;
+  margin-bottom: 30px;
+  display: flex;
   justify-content: center;
 }
 
@@ -329,7 +353,7 @@ span.gradient-text {
 }
 
 .skills-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -391,13 +415,165 @@ span.gradient-text {
    PROJECTS SECTION
    ========================== */
 
-   #projects {
-    height: 100vh;
-    background: #0d1117;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-   }
+#projects {
+  height: 200vh;
+  background: #0d1117;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+   
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #161B22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  width: 320px;
+  height: 500px;
+  box-shadow: #50008981 0px 0px 100px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 318px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden; 
+}
+
+
+.image-wrapper img {
+    width: 100%;
+    height: 300px;         /* increase displayed height */
+    object-fit: cover;     /* keeps image proportion, crops sides */
+    display: block;
+    transform: scale(1.05); /* optional default zoom */
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.15); /* hover zoom */
+}
+
+.portfolio-card-title {
+  font-size: 0.7rem;
+  color: #c9d1d9;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 23px;
+  margin-bottom: 8px;
+}
+
+.portfolio-card-tags {
+  display: flex;
+  margin-left: 22px;
+  margin-bottom: -5px;
+}
+
+.card-tag {
+  font-size: 0.3rem;
+  color: #a78bfa;
+  border: 1px solid #c084fc;
+  border-radius: 0.2rem;
+  padding: 6px 12px;
+  margin: 5px 8px 0 0;
+  background-color: #f3e8ff;
+  margin-top: 20px;
+}
+
+
+.portfolio-card-description {
+  background-color: none;       
+  border-top: none;                               
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;    
+  padding: 0 0 0 24px;
+  width: 85%;
+  margin-bottom: 18px;
+  justify-content: center;
+  font-size: 0.5rem;
+  color: #c9d1d9;
+}
+
+.portfolio-card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.live-demo-btn {
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: normal;
+  color: white;
+  background: linear-gradient(to right, #b084ff 0%, #9b7fff 50%, #6a2bdb 100%);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1.3em 50px;
+  min-width: 250px;
+  transition: all 0.5s ease;
+}
+
+.live-demo-btn:hover {
+  background: linear-gradient(to right, #b084ff 0%, #c8a1ff 50%, #6a2bdb 100%);
+  box-shadow: 0 12px 40px rgba(200, 161, 255, 0.3); /* bigger, subtle glow below */
+  transform: translateY(-2px) scale(1.1);
+}
+
+.source-code-btn {
+  display: inline-block;
+  font-size: 0.5rem;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #c9d1d9;
+  border: 2px solid;
+  border-color: #8b4dff6b;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-decoration: none; /* important for <a> */
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.7em 50px; 
+  min-width: 250px;
+  background-color: #161B22;
+}
+
+.source-code-btn-container {
+  position: static;
+}
+
+.source-code-btn:hover {
+  background: linear-gradient(to right,#7c3aed00,  #a78bfa33,  #7c3aed00);
+  transform: translateY(-2px) scale(1.1);
+  border-color: #a78bfa;
+}
+
+
+
+
+
 
 
 
